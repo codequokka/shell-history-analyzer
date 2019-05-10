@@ -1,4 +1,5 @@
 # Shell History Analyzer
+[![Build Status](https://travis-ci.org/codequokka/shell-history-analyzer.svg?branch=master)](https://travis-ci.org/codequokka/shell-history-analyzer)
 
 Get insights from your command history with dockernized ELK stask.
 ![dashboard](/docs/images/dashboard.png)
