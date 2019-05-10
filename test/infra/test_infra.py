@@ -1,27 +1,22 @@
 import pytest
 
 
-def test_docker_command_exists(host):
-    assert host.exists('docker') is True
+@pytest.mark.parametrize('command', [
+    'docker',
+    'docker-compose',
+])
+def test_docker_command_exists(host, command):
+    assert host.exists(command) is True
 
 
-def test_docker_compose_command_exists(host):
-    assert host.exists('docker-compose') is True
-
-
-def test_elasticsearch_container_is_running(host):
-    elasticsearch = host.docker('elasticsearch')
-    assert elasticsearch.is_running is True
-
-
-def test_logstash_container_is_running(host):
-    elasticsearch = host.docker('logstash')
-    assert elasticsearch.is_running is True
-
-
-def test_kibana_container_is_running(host):
-    elasticsearch = host.docker('kibana')
-    assert elasticsearch.is_running is True
+@pytest.mark.parametrize('container', [
+    'elasticsearch',
+    'logstash',
+    'kibana',
+])
+def test_elasticsearch_container_is_running(host, container):
+    container = host.docker(container)
+    assert container.is_running is True
 
 
 @pytest.mark.skip(reason='Testinfra does not support port testing on darwin')
