@@ -1,0 +1,13 @@
+{
+  "index_patterns": "zsh_history*",
+  "mappings" : {
+    "properties" : {
+      "@timestamp" : {
+        "type" : "date"
+      },
+      "executed_command" : {
+        "type" : "keyword"
+      }
+    }
+  }
+}

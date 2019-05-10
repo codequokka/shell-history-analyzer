@@ -1,0 +1,12 @@
+{
+  "mappings" : {
+    "properties" : {
+      "@timestamp" : {
+        "type" : "date"
+      },
+      "executed_command" : {
+        "type" : "keyword"
+      }
+    }
+  }
+}

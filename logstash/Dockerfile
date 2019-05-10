@@ -1,0 +1,1 @@
+FROM docker.elastic.co/logstash/logstash-oss:7.0.1
