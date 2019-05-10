@@ -7,7 +7,7 @@ services:
   - docker
 
 before_install:
-  - docker-compose -d
+  - docker-compose up -d
 
 install:
   - pip install testinfra
