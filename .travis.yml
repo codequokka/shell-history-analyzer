@@ -10,7 +10,10 @@ before_install:
   - docker-compose up -d
 
 install:
-  - pip install testinfra
+  - pip install pipenv
+  - pipenv sync -d
 
 script:
-  - pytest test -v
+  - pipenv run flake8 test
+  - sleep 30
+  - pipenv run pytest test -v
