@@ -6,6 +6,8 @@ verify_ssl = true
 [dev-packages]
 testinfra = "*"
 flake8 = "*"
+yapf = "*"
+elasticsearch = "*"
 
 [packages]
 
