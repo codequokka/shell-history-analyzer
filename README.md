@@ -24,7 +24,7 @@ Get insights from your command history with dockernized ELK stask.
 
 ## Requirements
 
-- Install ___docker___ on your computer.
+- Install ___docker___, ___docker-compose___ on your computer.
   - Ubuntu
     - I'm sure that the linux guys know how to install docker.
     - I tested against ubuntu 16.04 only,
@@ -38,6 +38,9 @@ brew cask install docker
 ```zsh:~/.zshrc
 # Set the location of history file to track by logstash
 export HISTFILE=~/.zsh_history
+
+# Extend the number of history appended to $HISTFILE to analyze
+export SAVEHIST=1000000
 
 # Extend history format to retrieve beginning time as datetime when command executed
 # : <beginning time>:<elapsed seconds>;<command>
