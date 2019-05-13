@@ -25,6 +25,10 @@ Get insights from your command history with dockernized ELK stask.
 ## Requirements
 
 - Install ___docker___ on your computer.
+  - Ubuntu
+    - I'm sure that the linux guys know how to install docker.
+    - I tested against ubuntu 16.04 only,
+      but it should work on current linux distribution.
   - macOS
 ```
 brew cask install docker

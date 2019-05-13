@@ -19,12 +19,19 @@ def test_elasticsearch_container_is_running(host, container):
     assert container.is_running is True
 
 
-@pytest.mark.skip(reason='Testinfra does not support port testing on darwin')
-def test_elasticsearch_port_is_listening(host):
-    assert host.socket('tcp://127.0.0.1:9200').is_listening
-    assert host.socket('tcp://127.0.0.1:9300').is_listening
+@pytest.mark.parametrize('url', [
+    'tcp://127.0.0.1:9200',
+    'tcp://127.0.0.1:9300',
+])
+def test_elasticsearch_port_is_listening(host, url):
+    if host.system_info.type == 'darwin':
+        pytest.skip("Testinfra does not support port testing on darwin")
+    else:
+        assert host.socket(url).is_listening
 
 
-@pytest.mark.skip(reason='Testinfra does not support port testing on darwin')
 def test_kibana_port_is_listening(host):
-    assert host.socket('tcp://127.0.0.1:5601').is_listening
+    if host.system_info.type == 'darwin':
+        pytest.skip("Testinfra does not support port testing on darwin")
+    else:
+        assert host.socket('tcp://127.0.0.1:5601').is_listening
