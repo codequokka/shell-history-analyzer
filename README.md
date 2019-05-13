@@ -64,6 +64,8 @@ $ docker-compose up -d
 ```
 
 3. Go into [kibana](http://127.0.0.1:5601) and emjoy it!
+    - If you access kibana too soon, you will encounter some errors on kibana.
+    - In that case, wait a few minutes until your shell histories are sent to kibana.
 
 ## How to stop
 
