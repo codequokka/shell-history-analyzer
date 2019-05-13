@@ -14,7 +14,7 @@ Get insights from your command history with dockernized ELK stask.
 
 ## WARNINGS
 
-- This software is currenly alpha status.
+- This software is currently alpha status.
   - Specifications are subject to change.
 
 - Only minimal features are currently supported.
@@ -24,11 +24,11 @@ Get insights from your command history with dockernized ELK stask.
 
 ## Requirements
 
-- Install ___docker___ on your computer.
+- Install ___docker___, ___docker-compose___ on your computer.
   - Ubuntu
     - I'm sure that the linux guys know how to install docker.
     - I tested against ubuntu 16.04 only,
-      but it should work on current linux distribution.
+      but it should work on current linux distributions.
   - macOS
 ```
 brew cask install docker
@@ -38,6 +38,9 @@ brew cask install docker
 ```zsh:~/.zshrc
 # Set the location of history file to track by logstash
 export HISTFILE=~/.zsh_history
+
+# Extend the number of history appended to $HISTFILE to analyze
+export SAVEHIST=1000000
 
 # Extend history format to retrieve beginning time as datetime when command executed
 # : <beginning time>:<elapsed seconds>;<command>
@@ -61,6 +64,8 @@ $ docker-compose up -d
 ```
 
 3. Go into [kibana](http://127.0.0.1:5601) and emjoy it!
+    - If you access kibana too soon, you will encounter some errors on kibana.
+    - In that case, wait a few minutes until your shell histories are sent to kibana.
 
 ## How to stop
 
@@ -78,6 +83,7 @@ $ docker-compose start
 ## Features
 
 - Display count of executed commands
+- Update dashoboard continously when your shell history added
 
 ## Future works (TODO)
 
