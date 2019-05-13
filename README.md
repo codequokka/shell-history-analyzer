@@ -14,7 +14,7 @@ Get insights from your command history with dockernized ELK stask.
 
 ## WARNINGS
 
-- This software is currenly alpha status.
+- This software is currently alpha status.
   - Specifications are subject to change.
 
 - Only minimal features are currently supported.
@@ -28,7 +28,7 @@ Get insights from your command history with dockernized ELK stask.
   - Ubuntu
     - I'm sure that the linux guys know how to install docker.
     - I tested against ubuntu 16.04 only,
-      but it should work on current linux distribution.
+      but it should work on current linux distributions.
   - macOS
 ```
 brew cask install docker
