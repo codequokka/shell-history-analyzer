@@ -83,6 +83,7 @@ $ docker-compose start
 ## Features
 
 - Display count of executed commands
+- Update dashoboard continously when your shell history added
 
 ## Future works (TODO)
 
