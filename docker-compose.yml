@@ -17,6 +17,7 @@ services:
       TZ:
     volumes:
       - ./logstash/pipeline:/usr/share/logstash/pipeline
+      - ./logstash/driver:/usr/share/logstash/driver
       - ${HOME}:/home
     depends_on:
       - elasticsearch
