@@ -1,6 +1,10 @@
 ---
 sudo: required
 
+env:
+  global:
+    TZ=Asia/Tokyo
+
 language: python
 
 services:

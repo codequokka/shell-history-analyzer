@@ -14,9 +14,20 @@ def test_docker_command_exists(host, command):
     'logstash',
     'kibana',
 ])
-def test_elasticsearch_container_is_running(host, container):
+def test_container_is_running(host, container):
     container = host.docker(container)
     assert container.is_running is True
+
+
+@pytest.mark.parametrize('container', [
+    'elasticsearch',
+    'logstash',
+    'kibana',
+])
+def test_container_is_running_at_tz_env_var(host, container):
+    container = host.docker(container)
+    date = host.run('docker exec' + ' ' + container.id + ' ' + 'date')
+    assert 'JST' in date.stdout
 
 
 @pytest.mark.parametrize('url', [

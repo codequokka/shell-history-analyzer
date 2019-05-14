@@ -34,7 +34,7 @@ Get insights from your command history with dockernized ELK stask.
 brew cask install docker
 ```
 
-- Add history settings to your shell(currently support ___zsh___ only).
+- Add history and timezone settings to your shell(currently support ___zsh___ only).
 ```zsh:~/.zshrc
 # Set the location of history file to track by logstash
 export HISTFILE=~/.zsh_history
@@ -48,6 +48,11 @@ setopt extended_history
 
 # Write out the command history immediately to update kibana dashboard soon
 setopt share_history
+
+# Change containers timezone to convert command execution datetime
+# to UTC properly
+# Change the value according to your time zone
+export TZ='Asia/Tokyo'
 ```
 
 ## How to start
