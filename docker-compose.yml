@@ -5,6 +5,7 @@ services:
     container_name: elasticsearch
     environment:
       discovery.type: single-node
+      TZ:
     ports:
       - 9200:9200
       - 9300:9300
@@ -12,6 +13,8 @@ services:
   logstash:
     build: ./logstash
     container_name: logstash
+    environment:
+      TZ:
     volumes:
       - ./logstash/pipeline:/usr/share/logstash/pipeline
       - ${HOME}:/home
@@ -23,6 +26,7 @@ services:
     container_name: kibana
     environment:
       ELASTICSEARCH_URL: http://elasticsearch:9200
+      TZ:
     ports:
       - 5601:5601
     depends_on:
