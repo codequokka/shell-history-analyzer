@@ -14,7 +14,7 @@ Get insights from your command history with dockernized ELK stask.
 
 ## WARNINGS
 
-- This software is currently alpha status.
+- This software is currently POC status.
   - Specifications are subject to change.
 
 - Only minimal features are currently supported.
@@ -24,7 +24,7 @@ Get insights from your command history with dockernized ELK stask.
 
 ## Requirements
 
-- Install ___docker___, ___docker-compose___ on your computer.
+1. Install ___docker___, ___docker-compose___ on your computer.
   - Ubuntu
     - I'm sure that the linux guys know how to install docker.
     - I tested against ubuntu 16.04 only,
@@ -34,24 +34,38 @@ Get insights from your command history with dockernized ELK stask.
 brew cask install docker
 ```
 
-- Add history and timezone settings to your shell(currently support ___zsh___ only).
-```zsh:~/.zshrc
+2. Setup data souce(currently support ___zsh___ only)
+  - Zsh history file
+    - Add settings to your .zshrc.
+```
 # Set the location of history file to track by logstash
 export HISTFILE=~/.zsh_history
 
 # Extend the number of history appended to $HISTFILE to analyze
 export SAVEHIST=1000000
 
-# Extend history format to retrieve beginning time as datetime when command executed
+# Extend history format to retrieve beginning time
+# as datetime when command executed
 # : <beginning time>:<elapsed seconds>;<command>
 setopt extended_history
 
 # Write out the command history immediately to update kibana dashboard soon
 setopt share_history
+```
 
+  - [b4b4r07/zsh-history](https://github.com/b4b4r07/zsh-history)
+    - Add settings to your .zshrc.
+```
+# Set the location of zsh-history db to track by logstash
+export ZSH_HISTORY_FILE="$HOME/.zsh_history.db"
+```
+
+3. Set your timezone
+  - Add timzone settings to your .zshrc.
+```
 # Change containers timezone to convert command execution datetime
 # to UTC properly
-# Change the value according to your time zone
+# Change the value according to your timezone
 export TZ='Asia/Tokyo'
 ```
 
