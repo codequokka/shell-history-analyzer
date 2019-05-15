@@ -1,7 +1,0 @@
-{
-  "query":{
-    "match": {
-      "type": "index-pattern"
-    }
-  }
-}

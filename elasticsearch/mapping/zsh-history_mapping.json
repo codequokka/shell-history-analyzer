@@ -1,0 +1,21 @@
+{
+  "mappings": {
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "dir": {
+        "type": "keyword"
+      },
+      "executed_command": {
+        "type": "keyword"
+      },
+      "host": {
+        "type": "keyword"
+      },
+      "status": {
+        "type": "short"
+      }
+    }
+  }
+}

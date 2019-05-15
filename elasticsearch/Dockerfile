@@ -1,2 +1,2 @@
 # Bundled charts and dashboard to official image
-FROM codequokka/elasticsearch-shell-history-analyzer:0.1.1
+FROM codequokka/elasticsearch-shell-history-analyzer:0.2.0
