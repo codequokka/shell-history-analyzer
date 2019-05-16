@@ -32,8 +32,9 @@ Get insights from your command history with dockernized ELK stask.
 ## Requirements
 
 1. Install ___docker___, ___docker-compose___ on your computer.
-- Ubuntu
+- Linux
   - I'm sure that the linux guys know how to install docker.
+    So I won't explain how to install docker here.
   - I tested against ubuntu 16.04 only,
     but it should work on current linux distributions.
 - macOS
@@ -45,7 +46,7 @@ brew cask install docker
 - Zsh history file
   - Add minmal settings to your .zshrc.
   - Zsh history file does not log your command history precisely.
-    So, I recommand you use another data source.
+    So I ___strongly___ recommend you use another data source.
 ```
 # Set the location of history file to track by logstash
 # Currently it does not work with any other value
