@@ -64,12 +64,16 @@ setopt share_history
 ```
 
 - [b4b4r07/zsh-history](https://github.com/b4b4r07/zsh-history)
+  - Install b4b4r07/zsh-history
   - Add minimal settings to your .zshrc.
 ```
 # Set the location of zsh-history db to track by logstash
 # Currently it does not work with any other value
 export ZSH_HISTORY_FILE="$HOME/.zsh_history.db"
 ```
+
+- [larkery/zsh-histdb](https://github.com/larkery/zsh-histdb)
+  - Install larkery/zsh-histdb
 
 3. Set your timezone
 - Add timzone settings to your .zshrc.
