@@ -32,8 +32,9 @@ Get insights from your command history with dockernized ELK stask.
 ## Requirements
 
 1. Install ___docker___, ___docker-compose___ on your computer.
-- Ubuntu
+- Linux
   - I'm sure that the linux guys know how to install docker.
+    So I won't explain how to install docker here.
   - I tested against ubuntu 16.04 only,
     but it should work on current linux distributions.
 - macOS
@@ -45,7 +46,7 @@ brew cask install docker
 - Zsh history file
   - Add minmal settings to your .zshrc.
   - Zsh history file does not log your command history precisely.
-    So, I recommand you use another data source.
+    So I ___strongly___ recommend you use another data source.
 ```
 # Set the location of history file to track by logstash
 # Currently it does not work with any other value
@@ -141,6 +142,9 @@ $ rm ~/.zsh_history_sincedb
 
 # For b4b4r07/zsh-history data source
 $ rm ~/.zsh_history.db_last_run
+
+# For larkery/zsh-histdb data source
+$ rm ~/.histdb/.zsh-history.db_last_run
 ```
 
 4. Boot dockernized ELK stack again.
@@ -169,9 +173,9 @@ $ docker-compose up -d
   - They does not log context informaton(Ex. pwd, hostname, etc).
 
 - Another data sources are required to analyze more.
-  - I examine following data source and support future release.
-    - [larkery/zsh-histdb](https://github.com/larkery/zsh-histdb)
-    - [b4b4r07/zsh-history](https://github.com/b4b4r07/zsh-history)
+  - I examine following data sources and support in future release.
+    - ~~[larkery/zsh-histdb](https://github.com/larkery/zsh-histdb)~~
+    - ~~[b4b4r07/zsh-history](https://github.com/b4b4r07/zsh-history)~~
     - [b4b4r07/history](https://github.com/b4b4r07/history)
 
 
