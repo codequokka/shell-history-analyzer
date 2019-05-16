@@ -141,6 +141,9 @@ $ rm ~/.zsh_history_sincedb
 
 # For b4b4r07/zsh-history data source
 $ rm ~/.zsh_history.db_last_run
+
+# For larkery/zsh-histdb data source
+$ rm ~/.histdb/.zsh-history.db_last_run
 ```
 
 4. Boot dockernized ELK stack again.
