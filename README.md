@@ -173,9 +173,9 @@ $ docker-compose up -d
   - They does not log context informaton(Ex. pwd, hostname, etc).
 
 - Another data sources are required to analyze more.
-  - I examine following data source and support future release.
-    - [larkery/zsh-histdb](https://github.com/larkery/zsh-histdb)
-    - [b4b4r07/zsh-history](https://github.com/b4b4r07/zsh-history)
+  - I examine following data sources and support in future release.
+    - ~~[larkery/zsh-histdb](https://github.com/larkery/zsh-histdb)~~
+    - ~~[b4b4r07/zsh-history](https://github.com/b4b4r07/zsh-history)~~
     - [b4b4r07/history](https://github.com/b4b4r07/history)
 
 
