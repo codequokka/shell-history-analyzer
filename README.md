@@ -101,7 +101,8 @@ $ docker-compose up -d
 
 3. Go into [kibana](http://127.0.0.1:5601) and emjoy it!
 - If you access kibana too soon, you will encounter some errors on kibana.
-- In that case, wait a few minutes until your shell histories are sent to kibana.
+- In that case, please wait a few minutes
+  until your shell histories are sent to kibana.
 
 
 ## How to stop
@@ -115,8 +116,8 @@ $ docker-compose stop
 ## How to reasume
 
 Start ELK stack.
-- If you start again, history entries added after stopping ELK
-  are also displayed in kibana dashboard.
+- If you start again, your histories added after stopping ELK
+  are also sent to kibana.
 ```
 $ docker-compose start
 ```
@@ -129,13 +130,15 @@ $ docker-compose start
 $ docker-compose down --rmi all
 ```
 
-2. Update repo
+2. Update repository
 ```
 $ git pull
 ```
 
-3. Remove logstash files(keeps track of the current position of monitored log files)
+3. Remove logstash files
+   (keeps track of the current position of monitored history files or DB)
 - Be careful not to delete your data source file!
+  I recommend you use copy and paste.
 ```
 # For zsh history file data source
 $ rm ~/.zsh_history_sincedb
@@ -154,8 +157,15 @@ $ docker-compose up -d
 
 
 ## Features
+- Basic statistics about your command history
+  - Number of execution
+  - Number of execution error
+  - Tag cloud of execution
+  - Ratio of execution
+  - Number of execution by dir
+  - List of commands
+  - Transition of execution
 
-- Display count of executed commands
 - Update dashoboard continously when your shell history added
 
 
