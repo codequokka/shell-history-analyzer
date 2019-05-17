@@ -3,6 +3,9 @@
 __pycache__/
 .pytest_cache/
 
+# Direnv
+.envrc
+
 # Pycharm
 .idea/
 
