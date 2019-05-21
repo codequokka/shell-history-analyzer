@@ -18,6 +18,7 @@ services:
     volumes:
       - ./logstash/pipeline:/usr/share/logstash/pipeline
       - ./logstash/driver:/usr/share/logstash/driver
+      - ./logstash/templates:/usr/share/logstash/templates
       - ${HOME}:/home
     depends_on:
       - elasticsearch

@@ -2,8 +2,7 @@
 sudo: required
 
 env:
-  global:
-    TZ=Asia/Tokyo
+  global: TZ=Asia/Tokyo
 
 language: python
 
@@ -19,5 +18,5 @@ install:
 
 script:
   - pipenv run flake8 test
-  - sleep 30
+  - sleep 60
   - pipenv run pytest test -v

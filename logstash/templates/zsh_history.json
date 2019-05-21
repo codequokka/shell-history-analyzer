@@ -1,4 +1,5 @@
 {
+  "index_patterns": "zsh_history*",
   "mappings" : {
     "properties" : {
       "@timestamp" : {
